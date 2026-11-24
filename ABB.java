@@ -129,7 +129,7 @@ public class ABB<K, V> implements IMapeamento<K, V> {
 		return null;
 	}
 
-	// TODO
+	/** 
 	@Override
 	public V remover(K chave) {
 
@@ -144,6 +144,7 @@ public class ABB<K, V> implements IMapeamento<K, V> {
 			finalizarMedicao();
 		}
 	}
+		*/
 
 	/** TODO
 	 * Método recursivo responsável por localizar um item na árvore e retirá-lo da árvore.
@@ -152,7 +153,16 @@ public class ABB<K, V> implements IMapeamento<K, V> {
 	 * @return a raiz atualizada da árvore ou subárvore da qual o item foi retirado.
 	 * @throws NoSuchElementException caso a chave não esteja na árvore.
 	 */
+
+	public No<K,V> remover(K chave){
+		if(chave == null)
+			throw new IllegalStateException("valor invalido");
+		return remover(raiz, chave);
+	}
 	protected No<K, V> remover(No<K, V> raizArvore, K chaveRemover) {
+		if(raizArvore == null)
+			return raizArvore;
+		
 		return null;
 	}
 
